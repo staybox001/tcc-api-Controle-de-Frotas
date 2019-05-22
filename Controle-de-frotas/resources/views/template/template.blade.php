@@ -61,7 +61,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/lista-veiculo') }}">
+        <a class="nav-link" href="{{ url('/veiculos') }}">
           <i class="fas fa-car"></i>
           <span>Veiculos</span></a>
       </li>

@@ -47,7 +47,7 @@
     <!-- manutenções do veículo -->
     <div class="col-sm-8 mb-3 mb-sm-0">
       <div>
-        <button class="btn btn-secondary btn-lg btn-block">Adicionar manutenção</button>
+        <a style="text-decoration:none;" href="{{ route('manutencoes.create') }}"><button class="btn btn-secondary btn-lg btn-block">Adicionar manutenção</button></a>
       </div>
       <br>
       <div>

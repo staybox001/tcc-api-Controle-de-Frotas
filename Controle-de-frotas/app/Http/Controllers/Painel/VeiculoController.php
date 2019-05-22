@@ -23,7 +23,7 @@ class VeiculoController extends Controller
     public function index(Veiculo $veiculo)
     {
         $veiculos = $veiculo->all();
-        return view('painel.veiculo.lista-veiculo', compact('veiculos'));
+        return view('painel.veiculo.veiculos', compact('veiculos'));
     }
 
    //envia para formulario
@@ -45,9 +45,9 @@ class VeiculoController extends Controller
         // insere os dados na tabela veiculo
         $insert = $this->veiculo->create($dadosFormulario);
         if ($insert) {
-            return redirect()->route('lista-veiculo.index');
+            return redirect()->route('veiculos.index');
         } else {
-            return redirect()->route('lista-veiculo.create');
+            return redirect()->route('veiculos.create');
         }
     }
 
@@ -79,9 +79,9 @@ class VeiculoController extends Controller
 
         //verifica se editou
         if($update)
-            return  redirect()->route('lista-veiculo.index');
+            return  redirect()->route('veiculos.index');
         else
-            return redirect()->route('lista-veiculo.edit', $id)->with(['errors' => 'Falha ao editar']);
+            return redirect()->route('veiculos.edit', $id)->with(['errors' => 'Falha ao editar']);
 
     }
 
@@ -92,9 +92,9 @@ class VeiculoController extends Controller
         $delete = $veiculo->delete();
 
         if ($delete) 
-            return redirect()->route('lista-veiculo.index');
+            return redirect()->route('veiculos.index');
         else
-            return redirect()->route('lista-veiculos.detalhes', $id)->with(['errors' => 'Falha ao deletar']);
+            return redirect()->route('veiculoss.detalhes', $id)->with(['errors' => 'Falha ao deletar']);
     }
 
     
